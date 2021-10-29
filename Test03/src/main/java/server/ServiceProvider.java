@@ -14,7 +14,6 @@ public class ServiceProvider {
         this.interfaceProvider = new HashMap<>();
     }
     public void provideServiceInterface(Object service) {
-        String serviceName = service.getClass().getName();
         Class<?>[] interfaces = service.getClass().getInterfaces();
         for (Class anInterface : interfaces) {
             interfaceProvider.put(anInterface.getName(),service);
